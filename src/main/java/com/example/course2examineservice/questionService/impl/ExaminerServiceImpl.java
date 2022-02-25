@@ -1,9 +1,9 @@
-package com.example.course2examineservice.qustionService.impl;
+package com.example.course2examineservice.questionService.impl;
 
 import com.example.course2examineservice.data.Question;
 import com.example.course2examineservice.exceptions.BadRequestException;
-import com.example.course2examineservice.qustionService.ExaminerService;
-import com.example.course2examineservice.qustionService.QuestionService;
+import com.example.course2examineservice.questionService.ExaminerService;
+import com.example.course2examineservice.questionService.QuestionService;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;

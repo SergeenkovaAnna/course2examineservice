@@ -1,4 +1,4 @@
-package com.example.course2examineservice.qustionService;
+package com.example.course2examineservice.questionService;
 
 import com.example.course2examineservice.data.Question;
 

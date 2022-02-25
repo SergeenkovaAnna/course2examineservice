@@ -1,22 +1,19 @@
-package com.example.course2examineservice.qustionService;
+package com.example.course2examineservice.questionService.impl;
 
 import com.example.course2examineservice.data.Question;
 import com.example.course2examineservice.exceptions.NotFoundQuestionException;
 import com.example.course2examineservice.exceptions.QuestionAlreadyExistException;
+import com.example.course2examineservice.questionService.QuestionService;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
-public class JavaQuestionService implements  QuestionService{
+public class JavaQuestionService implements QuestionService {
 
     private final Set<Question> questions = new HashSet<>();
 
     private final Random random = new Random();
-
-//    public JavaQuestionService(Set<Question> questions) {
-//        this.questions = new LinkedHashSet<>();
-//    }
 
     @Override
     public Question add(String question, String answer) {
@@ -40,14 +37,6 @@ public class JavaQuestionService implements  QuestionService{
         }
         return remove(question, answer);
     }
-
-//    @Override
-//    public Question remove(Question question) {
-//        if (!questions.remove(question)) {
-//            throw new NotFoundQuestionException();
-//        }
-//        return question;
-//    }
 
     @Override
     public Collection<Question> getAll() {
