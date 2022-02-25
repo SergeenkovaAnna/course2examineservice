@@ -35,16 +35,19 @@ public class JavaQuestionService implements  QuestionService{
     @Override
     public Question remove(String question, String answer) {
         Question deleteQuestion = new Question(question, answer);
-        return remove(deleteQuestion);
-    }
-
-    @Override
-    public Question remove(Question question) {
-        if (!questions.remove(question)) {
+        if (!questions.remove(deleteQuestion)) {
             throw new NotFoundQuestionException();
         }
-        return question;
+        return remove(question, answer);
     }
+
+//    @Override
+//    public Question remove(Question question) {
+//        if (!questions.remove(question)) {
+//            throw new NotFoundQuestionException();
+//        }
+//        return question;
+//    }
 
     @Override
     public Collection<Question> getAll() {

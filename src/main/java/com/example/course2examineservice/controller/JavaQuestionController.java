@@ -27,8 +27,9 @@ public class JavaQuestionController {
     }
 
     @GetMapping("remove")
-    public String removeQuestion(@RequestParam Question question) {
-        Question result = service.remove(question);
+    public String removeQuestion(@RequestParam String question,
+                                 @RequestParam String answer) {
+        Question result = service.remove(question, answer);
         return message(result, "вопрос и ответ успешно удален");
     }
 

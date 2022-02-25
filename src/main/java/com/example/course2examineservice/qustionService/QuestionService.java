@@ -12,7 +12,7 @@ public interface QuestionService {
 
     Question remove(String question, String answer);
 
-    Question remove(Question question);
+//    Question remove(Question question);
 
     Collection<Question> getAll();
 
